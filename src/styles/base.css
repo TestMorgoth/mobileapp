@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--type-font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background:
+    radial-gradient(circle at top, rgba(201, 151, 42, 0.18), transparent 22rem),
+    radial-gradient(circle at 85% 10%, rgba(201, 151, 42, 0.1), transparent 16rem),
+    linear-gradient(180deg, var(--color-bg-canvas) 0%, var(--color-bg-canvas-alt) 100%);
+}
+
+body::selection {
+  background: rgba(201, 151, 42, 0.28);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+textarea,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--type-font-display);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+p,
+ul {
+  margin-top: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

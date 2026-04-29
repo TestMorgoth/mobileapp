@@ -1,0 +1,26 @@
+.page-shell-explore {
+  gap: var(--space-xl);
+}
+
+.explore-stack {
+  gap: var(--space-xl);
+}
+
+.page-shell-explore .hero-media {
+  min-height: 26rem;
+}
+
+.explore-intent-panel {
+  gap: var(--space-lg);
+}
+
+.explore-intent-grid,
+.explore-feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+@media (max-width: 719px) {
+  .page-shell-explore .hero-media {
+    min-height: 22rem;
+  }
+}

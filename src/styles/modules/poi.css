@@ -1,0 +1,29 @@
+.page-shell-poi-list,
+.page-shell-poi-detail {
+  gap: var(--space-xl);
+}
+
+.poi-stack {
+  gap: var(--space-xl);
+}
+
+.page-shell-poi-list .hero-media,
+.page-shell-poi-detail .hero-media {
+  min-height: 24rem;
+}
+
+.poi-grid,
+.poi-focus-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.poi-overview {
+  gap: var(--space-lg);
+}
+
+@media (max-width: 719px) {
+  .page-shell-poi-list .hero-media,
+  .page-shell-poi-detail .hero-media {
+    min-height: 21rem;
+  }
+}

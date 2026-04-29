@@ -1,0 +1,45 @@
+.page-shell-assistant {
+  gap: var(--space-xl);
+}
+
+.page-shell-assistant .hero-media {
+  min-height: 24rem;
+}
+
+.assistant-stack {
+  gap: var(--space-xl);
+}
+
+.assistant-overview {
+  gap: var(--space-lg);
+}
+
+.assistant-overview-text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  max-width: 42rem;
+}
+
+.assistant-starter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.assistant-controls-row {
+  margin-top: var(--space-sm);
+}
+
+.assistant-composer {
+  margin-top: var(--space-md);
+}
+
+.assistant-textarea {
+  min-height: 7.5rem;
+}
+
+@media (max-width: 719px) {
+  .page-shell-assistant .hero-media {
+    min-height: 21rem;
+  }
+}
