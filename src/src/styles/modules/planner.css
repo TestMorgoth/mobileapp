@@ -1,0 +1,35 @@
+.page-shell-planner {
+  gap: var(--space-xl);
+}
+
+.page-shell-planner .hero-media {
+  min-height: 22rem;
+}
+
+.planner-step-section,
+.planner-summary-card {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(34, 28, 20, 0.92) 0%, rgba(24, 20, 14, 0.96) 100%);
+}
+
+.planner-step-copy h3,
+.planner-summary-card h3 {
+  margin: 0 0 var(--space-xs);
+}
+
+.planner-toggle-card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+}
+
+@media (max-width: 719px) {
+  .page-shell-planner .hero-media {
+    min-height: 20rem;
+  }
+}

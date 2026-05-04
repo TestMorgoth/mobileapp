@@ -1,0 +1,7 @@
+.page-shell-poi-detail .section,
+.page-shell-event-detail .section,
+.page-shell-itinerary-detail .section {
+  background:
+    linear-gradient(180deg, rgba(31, 26, 18, 0.96) 0%, rgba(19, 16, 12, 0.98) 100%);
+  border-color: var(--color-border-subtle);
+}

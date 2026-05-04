@@ -1,0 +1,31 @@
+.page-shell-events-list,
+.page-shell-event-detail {
+  gap: var(--space-xl);
+}
+
+.events-stack {
+  gap: var(--space-xl);
+}
+
+.page-shell-events-list .hero-media,
+.page-shell-event-detail .hero-media {
+  min-height: 24rem;
+}
+
+.events-grid,
+.events-focus-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.events-card-stack,
+.events-focus-card,
+.events-overview {
+  gap: var(--space-lg);
+}
+
+@media (max-width: 719px) {
+  .page-shell-events-list .hero-media,
+  .page-shell-event-detail .hero-media {
+    min-height: 21rem;
+  }
+}

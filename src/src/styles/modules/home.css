@@ -1,0 +1,52 @@
+.page-shell-home {
+  gap: var(--space-xl);
+}
+
+.page-shell-home .hero-media {
+  min-height: 28rem;
+}
+
+.home-stack {
+  gap: var(--space-xl);
+}
+
+.home-overview {
+  gap: var(--space-lg);
+}
+
+.home-overview-copy {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.home-overview-text {
+  max-width: 42rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.home-action-grid,
+.home-feature-grid,
+.home-story-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.home-story-card {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.home-story-body {
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+@media (max-width: 719px) {
+  .page-shell-home .hero-media {
+    min-height: 24rem;
+  }
+}

@@ -1,0 +1,38 @@
+.map-shell {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.page-shell-map .hero-media {
+  min-height: 22rem;
+}
+
+.map-status-card {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.map-canvas-shell {
+  overflow: hidden;
+  padding: 0;
+}
+
+.map-canvas {
+  width: 100%;
+  min-height: 24rem;
+  background:
+    linear-gradient(180deg, rgba(23, 76, 79, 0.08) 0%, rgba(23, 76, 79, 0.02) 100%),
+    var(--color-bg-surface-strong);
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 719px) {
+  .page-shell-map .hero-media {
+    min-height: 20rem;
+  }
+}
