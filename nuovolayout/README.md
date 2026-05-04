@@ -1,14 +1,30 @@
-# nuovolayout consolidato
+# Patch nuovolayout – pagine mancanti + collegamenti
 
-Pacchetto riorganizzato con un unico CSS (`assets/layout.css`) e una sola cartella assets.
+Questo zip contiene:
+- nuove pagine HTML mancanti per coprire le rotte presenti in `src`
+- pagine esistenti aggiornate con link verso dettagli, mappa, ricerca, preferiti e profilo
+- `assets/layout.css` aggiornato con le classi necessarie alle nuove pagine
 
-## Pagine
-- `index.html`
-- `esplora.html`
-- `eventi.html`
-- `luoghi.html`
-- `planner.html`
-- `assistente.html`
+## Nuove pagine
+- luogo-dettaglio.html
+- evento-dettaglio.html
+- itinerari.html
+- itinerario-dettaglio.html
+- ricerca.html
+- mappa.html
+- preferiti.html
+- profilo.html
+- impostazioni.html
+- accessibilita.html
+- legale.html
 
-## Note
-Le classi sono state rinominate con prefisso `nl-` per ridurre le sovrapposizioni tra pagine. Tutti i path asset sono stati aggiornati verso `assets/`.
+## Pagine modificate incluse
+- index.html
+- esplora.html
+- eventi.html
+- luoghi.html
+- planner.html
+- assistente.html
+- assets/layout.css
+
+Le immagini sono referenziate dalla cartella assets già esistente nel progetto `nuovolayout`.

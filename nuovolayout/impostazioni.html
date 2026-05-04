@@ -7,30 +7,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/layout.css" />
-  <title>Nome del Comune – Luoghi</title>
+  <title>Nome del Comune – Impostazioni</title>
 </head>
-<body class="nl-page nl-places">
+<body class="nl-page nl-settings">
 <div class="nl-bg nl-bg--dark"></div>
 <main class="nl-shell">
 <header class="nl-topbar">
-  <a class="nl-circle-btn" href="esplora.html" aria-label="Indietro">
+  <a class="nl-circle-btn" href="profilo.html" aria-label="Indietro">
     <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
   </a>
-  <a class="nl-circle-btn" href="assistente.html" aria-label="Profilo">
+  <a class="nl-circle-btn" href="profilo.html" aria-label="Profilo">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg>
   </a>
 </header>
 <section class="nl-page-title">
-  <h1>Luoghi</h1>
-  <p>Scorci da scoprire</p>
+  <h1>Impostazioni</h1>
+  <p>Controlli rapidi del canale mobile</p>
   <div class="nl-decor"><span></span><i></i><span></span></div>
 </section>
-<section class="nl-filters"><button>Tutti</button><button>Panorami</button><button>Cultura</button><button>Sapori</button></section><section class="nl-place-list">
-<a class="nl-place-row" href="luogo-dettaglio.html"><img src="assets/place-belvedere.png" alt=""><div><span>Panorama</span><h2>Belvedere del Lago</h2><p>Una terrazza naturale da cui osservare il profilo del territorio.</p><div class="nl-place-meta">30 min</div></div></a>
-<a class="nl-place-row" href="luogo-dettaglio.html"><img src="assets/place-borgo.png" alt=""><div><span>Borgo</span><h2>Centro Storico</h2><p>Vie in pietra, piccole piazze e scorci antichi.</p><div class="nl-place-meta">45 min</div></div></a>
-<a class="nl-place-row" href="luogo-dettaglio.html"><img src="assets/place-castello.png" alt=""><div><span>Cultura</span><h2>Rocca Medievale</h2><p>Un punto monumentale che racconta la storia del territorio.</p><div class="nl-place-meta">60 min</div></div></a>
-<a class="nl-place-row" href="luogo-dettaglio.html"><img src="assets/place-sapori.png" alt=""><div><span>Sapori</span><h2>Bottega dei Sapori</h2><p>Una sosta dedicata ai prodotti locali.</p><div class="nl-place-meta">40 min</div></div></a>
-</section><section class="nl-assist-box"><div class="nl-mini-orb">AI</div><div><h3>Vuoi creare un percorso con questi luoghi?</h3><p>L'assistente può combinarli in un itinerario coerente.</p></div><a class="nl-primary" href="planner.html">Crea itinerario</a></section><nav class="nl-nav" aria-label="Navigazione principale">
+<section class="nl-block-card">
+  <p>Stato</p><h3>Preferenze previste</h3>
+  <div class="nl-settings-list">
+    <article><h4>Lingua applicazione</h4><p>Preparazione per localizzazione e preferenze personali.</p><span>Da attivare</span></article>
+    <article><h4>Geolocalizzazione</h4><p>Controlli sui permessi necessari a mappa e suggerimenti contestuali.</p><span>Parziale</span></article>
+    <article><h4>Cache locale</h4><p>Gestione dei contenuti essenziali per velocizzare l’esperienza.</p><span>Foundation</span></article>
+    <article><h4>Notifiche future</h4><p>Predisposizione per eventi e promemoria visita.</p><span>Future</span></article>
+  </div>
+</section>
+<section class="nl-card-grid">
+  <a href="accessibilita.html"><h4>Accessibilità</h4><p>Preferenze di leggibilità e inclusione.</p></a>
+  <a href="legale.html"><h4>Legale</h4><p>Privacy, termini e contatti.</p></a>
+</section><nav class="nl-nav" aria-label="Navigazione principale">
 <a class="nl-nav__item" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a>
 <a class="nl-nav__item nl-nav__item--active" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a>
 <a class="nl-nav__item" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a>

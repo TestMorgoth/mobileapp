@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/layout.css" />
+  <title>Nome del Comune – Dettaglio luogo</title>
+</head>
+<body class="nl-page nl-detail nl-place-detail">
+<div class="nl-bg nl-bg--dark"></div>
+<main class="nl-shell">
+<header class="nl-topbar">
+  <a class="nl-circle-btn" href="luoghi.html" aria-label="Indietro">
+    <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+  </a>
+  <a class="nl-circle-btn" href="assistente.html" aria-label="Profilo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg>
+  </a>
+</header>
+<section class="nl-detail-hero">
+  <img src="assets/place-belvedere.png" alt="">
+  <div class="nl-detail-hero__shade"></div>
+  <div class="nl-detail-hero__content">
+    <p class="nl-detail-hero__eyebrow">Luogo</p>
+    <h1>Belvedere del Lago</h1>
+    <p>Una terrazza naturale da cui osservare il profilo del territorio, ideale al tramonto e facilmente integrabile in un itinerario breve.</p>
+    <div class="nl-pills"><span class="nl-pill">Nome Comune</span><span class="nl-pill">30 min</span><span class="nl-pill">Panorama</span><span class="nl-pill">Con mappa</span></div>
+    <div class="nl-action-row"><a class="nl-primary" href="preferiti.html">Salva preferito</a><a class="nl-primary nl-primary--ghost" href="assistente.html">Chiedi all’AI</a><a class="nl-primary nl-primary--ghost" href="mappa.html">Apri mappa</a></div>
+  </div>
+</section>
+<section class="nl-content-block nl-block-card">
+  <p>Contenuto</p>
+  <h3>Panoramica</h3>
+  <p>Il Belvedere del Lago è pensato come punto di partenza per orientarsi nel territorio. La scheda presenta descrizione, tempo consigliato, livello di accesso e collegamenti verso mappa e assistente.</p>
+</section>
+<section class="nl-content-block nl-block-card">
+  <p>Pratiche</p>
+  <h3>Informazioni utili</h3>
+  <div class="nl-info-grid">
+<article><span>Comune</span><strong>Nome Comune</strong></article>
+<article><span>Durata visita</span><strong>30 min</strong></article>
+<article><span>Famiglie</span><strong>Sì</strong></article>
+<article><span>Mappa</span><strong>Disponibile</strong></article>
+</div>
+</section>
+<section class="nl-content-block nl-block-card">
+  <p>Lettura editoriale</p>
+  <h3>Da non perdere</h3>
+  <div class="nl-card-grid">
+<article><h4>Perché aprirlo ora</h4><p>È un luogo immediato, scenografico e utile per iniziare la visita con una visione complessiva del paesaggio.</p></article>
+<article><h4>Contesto stagionale</h4><p>Particolarmente adatto nelle ore morbide della giornata e nei percorsi fotografici.</p></article>
+<article><h4>Orientamento</h4><p>Può essere usato come target iniziale nella mappa o come prima tappa del planner.</p></article>
+</div>
+</section>
+<section class="nl-content-block nl-block-card">
+  <p>Orientati</p>
+  <h3>Mappa</h3>
+  <div class="nl-map-preview"><p>Coordinate disponibili. Apri la mappa per visualizzare il punto e calcolare la posizione rispetto all’utente.</p><a class="nl-primary" href="mappa.html">Apri in mappa</a></div>
+</section>
+<nav class="nl-nav" aria-label="Navigazione principale">
+<a class="nl-nav__item" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a>
+<a class="nl-nav__item nl-nav__item--active" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a>
+<a class="nl-nav__item" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a>
+<a class="nl-nav__item" href="planner.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/><path d="M7 5l-3 3 3 3M17 11l3 3-3 3"/></svg></span><span>Planner</span></a>
+</nav>
+</main></body></html>
