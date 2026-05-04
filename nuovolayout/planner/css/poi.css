@@ -1,0 +1,532 @@
+:root {
+  --page-bg: #070605;
+  --gold: #d8b075;
+  --gold-soft: #edc78d;
+  --gold-pale: #fff0c6;
+  --gold-shadow: rgba(244, 201, 123, 0.32);
+  --content-max: 520px;
+  --side-space: clamp(18px, 5vw, 32px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--page-bg);
+  color: var(--gold);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--gold-pale);
+  outline-offset: 4px;
+}
+
+/* LIVELLO 0: pagina browser responsive */
+.poi-page {
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background: var(--page-bg);
+}
+
+/* LIVELLO 1: fondali della pagina */
+.poi-page__base,
+.poi-page__hero-bg,
+.poi-page__overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.poi-page__base {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(72, 45, 21, 0.26) 0%, rgba(15, 10, 6, 0.16) 24%, rgba(7, 5, 4, 0) 42%),
+    linear-gradient(180deg, #110d0a 0%, #0d0a08 18%, #080706 48%, #050403 100%);
+}
+
+.poi-page__hero-bg {
+  z-index: 1;
+  height: clamp(250px, 38vh, 370px);
+  background-image: url("../assets/poi-hero-bg.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.poi-page__overlay--top {
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 8, 5, 0.42) 0%,
+    rgba(8, 6, 4, 0.2) 16%,
+    rgba(7, 6, 4, 0) 35%
+  );
+}
+
+.poi-page__overlay--fade {
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 6, 4, 0.06) 0%,
+    rgba(8, 6, 4, 0.24) 18%,
+    rgba(7, 6, 4, 0.75) 34%,
+    rgba(7, 6, 5, 0.98) 50%,
+    rgba(5, 4, 4, 1) 100%
+  );
+}
+
+.poi-page__overlay--vignette {
+  z-index: 4;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 214, 145, 0.08) 0%, rgba(255, 214, 145, 0.02) 20%, rgba(0, 0, 0, 0) 38%),
+    radial-gradient(circle at 50% 46%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 55%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+/* LIVELLO 2: layout fluido */
+.poi-layout {
+  position: relative;
+  z-index: 5;
+  width: min(100%, var(--content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding:
+    max(44px, calc(env(safe-area-inset-top) + 28px))
+    var(--side-space)
+    max(32px, calc(env(safe-area-inset-bottom) + 28px));
+}
+
+/* LIVELLO 3: topbar */
+.poi-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.poi-topbar__back,
+.poi-topbar__profile {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--gold);
+}
+
+.poi-topbar__back svg {
+  width: 28px;
+  height: 28px;
+}
+
+.poi-topbar__profile {
+  display: inline-grid;
+  place-items: center;
+  width: clamp(42px, 10vw, 48px);
+  height: clamp(42px, 10vw, 48px);
+  border-radius: 50%;
+  border: 1.4px solid rgba(216, 176, 117, 0.75);
+  background: rgba(10, 8, 7, 0.1);
+}
+
+.poi-topbar__profile svg {
+  width: 20px;
+  height: 20px;
+}
+
+.poi-topbar path,
+.poi-topbar circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* LIVELLO 4: hero */
+.poi-hero {
+  text-align: center;
+  padding-top: clamp(68px, 13vh, 110px);
+}
+
+.poi-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(44px, 11.5vw, 72px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--gold-soft);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.poi-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 14px);
+}
+
+.poi-divider--hero {
+  margin-top: 10px;
+}
+
+.poi-divider span {
+  flex: 1 1 0;
+  max-width: 110px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(216, 176, 117, 0) 0%,
+    rgba(216, 176, 117, 0.8) 50%,
+    rgba(216, 176, 117, 0) 100%
+  );
+}
+
+.poi-divider p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 300;
+  color: rgba(237, 199, 141, 0.95);
+}
+
+/* LIVELLO 5: griglia categorie */
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 5vw, 22px) clamp(14px, 4vw, 18px);
+  margin-top: clamp(30px, 7vh, 42px);
+}
+
+.poi-card {
+  appearance: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 364 / 394;
+  overflow: hidden;
+  padding: 0;
+  border: 1.4px solid rgba(216, 176, 117, 0.52);
+  border-radius: clamp(18px, 5vw, 24px);
+  background: rgba(15, 10, 8, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.poi-card--selected {
+  border-color: rgba(245, 212, 152, 0.9);
+  box-shadow:
+    0 0 16px rgba(244, 201, 123, 0.32),
+    0 0 30px rgba(244, 201, 123, 0.14),
+    inset 0 0 0 1px rgba(255, 238, 200, 0.32);
+}
+
+.poi-card__image,
+.poi-card__shade,
+.poi-card__content {
+  position: absolute;
+  inset: 0;
+}
+
+.poi-card__image {
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+}
+
+.poi-card--monumenti .poi-card__image {
+  background-image: url("../assets/poi-monumenti.png");
+}
+
+.poi-card--musei .poi-card__image {
+  background-image: url("../assets/poi-musei.png");
+}
+
+.poi-card--natura .poi-card__image {
+  background-image: url("../assets/poi-natura.png");
+}
+
+.poi-card--cibo .poi-card__image {
+  background-image: url("../assets/poi-cibo.png");
+}
+
+.poi-card__shade {
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 8, 7, 0.05) 0%,
+    rgba(8, 7, 6, 0.08) 42%,
+    rgba(6, 5, 5, 0.74) 82%,
+    rgba(5, 4, 4, 0.96) 100%
+  );
+}
+
+.poi-card__content {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(4px, 1.3vw, 7px);
+  padding: clamp(12px, 3.6vw, 16px);
+}
+
+.poi-card__icon {
+  width: clamp(28px, 8vw, 36px);
+  height: clamp(28px, 8vw, 36px);
+  display: grid;
+  place-items: center;
+}
+
+.poi-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.poi-card__icon path,
+.poi-card__icon circle {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.poi-card__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(27px, 7.4vw, 36px);
+  line-height: 1;
+  font-weight: 500;
+  color: var(--gold-soft);
+}
+
+.poi-card__check {
+  position: absolute;
+  z-index: 4;
+  top: clamp(10px, 3vw, 14px);
+  right: clamp(10px, 3vw, 14px);
+  display: grid;
+  place-items: center;
+  width: clamp(30px, 8vw, 36px);
+  height: clamp(30px, 8vw, 36px);
+  border-radius: 50%;
+  border: 2px solid rgba(245, 212, 152, 0.92);
+  background: rgba(244, 201, 123, 0.08);
+  box-shadow: 0 0 12px rgba(244, 201, 123, 0.25);
+}
+
+.poi-card__check svg {
+  width: 18px;
+  height: 18px;
+}
+
+.poi-card__check path {
+  fill: none;
+  stroke: var(--gold-pale);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* LIVELLO 6-7: sezioni */
+.poi-section {
+  margin-top: clamp(26px, 6vw, 34px);
+}
+
+.accessibility-options {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(8px, 2vw, 14px);
+}
+
+.access-option {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: center;
+  color: var(--gold);
+}
+
+.access-option__circle {
+  width: clamp(52px, 13vw, 62px);
+  height: clamp(52px, 13vw, 62px);
+  margin: 0 auto 8px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1.5px solid rgba(216, 176, 117, 0.52);
+  background: rgba(18, 13, 9, 0.22);
+}
+
+.access-option--active .access-option__circle {
+  border-color: rgba(245, 212, 152, 0.92);
+  box-shadow:
+    0 0 16px rgba(244, 201, 123, 0.32),
+    inset 0 0 12px rgba(244, 201, 123, 0.06);
+}
+
+.access-option svg {
+  width: clamp(25px, 7vw, 31px);
+  height: clamp(25px, 7vw, 31px);
+}
+
+.access-option path,
+.access-option circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.access-option__label {
+  display: block;
+  font-size: clamp(10px, 3vw, 12px);
+  line-height: 1.22;
+  font-weight: 400;
+  color: var(--gold-soft);
+}
+
+.time-tabs {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 0.85fr 0.85fr 1.5fr 1fr;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1.4px solid rgba(216, 176, 117, 0.58);
+  background: rgba(16, 12, 9, 0.36);
+}
+
+.time-tabs button {
+  appearance: none;
+  min-height: clamp(40px, 10vw, 46px);
+  border: 0;
+  border-right: 1px solid rgba(216, 176, 117, 0.45);
+  background: transparent;
+  color: var(--gold-soft);
+  font-size: clamp(11px, 3vw, 14px);
+  font-weight: 400;
+  padding: 0 8px;
+}
+
+.time-tabs button:last-child {
+  border-right: 0;
+}
+
+.time-tabs__active {
+  background: linear-gradient(180deg, rgba(215, 171, 101, 0.34) 0%, rgba(171, 124, 59, 0.55) 100%) !important;
+  box-shadow:
+    inset 0 0 14px rgba(255, 229, 175, 0.22),
+    0 0 16px rgba(244, 201, 123, 0.18);
+  color: var(--gold-pale) !important;
+}
+
+/* LIVELLO 8: CTA */
+.poi-cta {
+  margin-top: clamp(26px, 7vw, 34px);
+}
+
+.cta {
+  appearance: none;
+  width: 100%;
+  min-height: clamp(64px, 16vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 26px;
+  border: 1.8px solid rgba(245, 212, 152, 0.88);
+  background: linear-gradient(180deg, rgba(164, 115, 52, 0.5) 0%, rgba(119, 80, 35, 0.72) 100%);
+  box-shadow:
+    0 0 20px rgba(244, 201, 123, 0.32),
+    inset 0 0 22px rgba(255, 234, 191, 0.12);
+  color: var(--gold-pale);
+}
+
+.cta span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(30px, 8vw, 40px);
+  font-weight: 500;
+}
+
+.cta svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cta path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Tablet / desktop: non è più una schermata fissa, cresce in modo naturale */
+@media (min-width: 700px) {
+  :root {
+    --content-max: 760px;
+    --side-space: 36px;
+  }
+
+  .poi-layout {
+    padding-top: 52px;
+    padding-bottom: 56px;
+  }
+
+  .poi-hero {
+    padding-top: 92px;
+  }
+
+  .poi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .poi-card {
+    aspect-ratio: 3 / 4.25;
+  }
+
+  .accessibility-options {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+
+  .time-tabs,
+  .cta {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+}
+
+/* Mobile stretto: mantiene la leggibilità senza tagli */
+@media (max-width: 380px) {
+  :root {
+    --side-space: 16px;
+  }
+
+  .accessibility-options {
+    gap: 4px;
+  }
+
+  .time-tabs {
+    grid-template-columns: 0.8fr 0.8fr 1.45fr 1fr;
+  }
+}

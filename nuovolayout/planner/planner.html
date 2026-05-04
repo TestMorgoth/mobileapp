@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Esplora il Territorio – POI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/poi.css" />
+</head>
+
+<body>
+  <!-- LIVELLO 0: pagina browser responsive, senza shell telefono -->
+  <main class="poi-page">
+
+    <!-- LIVELLO 1: background globale della pagina -->
+    <div class="poi-page__base" aria-hidden="true"></div>
+    <div class="poi-page__hero-bg" aria-hidden="true"></div>
+    <div class="poi-page__overlay poi-page__overlay--top" aria-hidden="true"></div>
+    <div class="poi-page__overlay poi-page__overlay--fade" aria-hidden="true"></div>
+    <div class="poi-page__overlay poi-page__overlay--vignette" aria-hidden="true"></div>
+
+    <!-- LIVELLO 2: contenuto principale -->
+    <div class="poi-layout">
+
+      <!-- LIVELLO 3: topbar -->
+      <header class="poi-topbar">
+        <button class="poi-topbar__back" type="button" aria-label="Torna indietro">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 12H5" />
+            <path d="M12 5l-7 7 7 7" />
+          </svg>
+        </button>
+
+        <button class="poi-topbar__profile" type="button" aria-label="Profilo">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 20a7 7 0 0 0-14 0" />
+            <circle cx="12" cy="8" r="4" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- LIVELLO 4: hero testuale -->
+      <section class="poi-hero">
+        <h1>Esplora il Territorio</h1>
+
+        <div class="poi-divider poi-divider--hero" aria-hidden="true">
+          <span></span>
+          <p>Cosa ti interessa?</p>
+          <span></span>
+        </div>
+      </section>
+
+      <!-- LIVELLO 5: griglia categorie, ogni card ha il proprio background -->
+      <section class="poi-grid" aria-label="Categorie di interesse">
+
+        <!-- LIVELLO 5.1: card Monumenti -->
+        <button class="poi-card poi-card--monumenti poi-card--selected" type="button" aria-label="Monumenti selezionato">
+          <span class="poi-card__image" aria-hidden="true"></span>
+          <span class="poi-card__shade" aria-hidden="true"></span>
+
+          <span class="poi-card__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" /></svg>
+          </span>
+
+          <span class="poi-card__content">
+            <span class="poi-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M5 20V10" />
+                <path d="M9 20V10" />
+                <path d="M15 20V10" />
+                <path d="M19 20V10" />
+                <path d="M2 10h20" />
+                <path d="M12 4l9 5H3l9-5Z" />
+              </svg>
+            </span>
+            <span class="poi-card__title">Monumenti</span>
+          </span>
+        </button>
+
+        <!-- LIVELLO 5.2: card Musei -->
+        <button class="poi-card poi-card--musei" type="button" aria-label="Musei">
+          <span class="poi-card__image" aria-hidden="true"></span>
+          <span class="poi-card__shade" aria-hidden="true"></span>
+
+          <span class="poi-card__content">
+            <span class="poi-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M5 20V10" />
+                <path d="M9 20V10" />
+                <path d="M15 20V10" />
+                <path d="M19 20V10" />
+                <path d="M2 10h20" />
+                <path d="M12 4l9 5H3l9-5Z" />
+              </svg>
+            </span>
+            <span class="poi-card__title">Musei</span>
+          </span>
+        </button>
+
+        <!-- LIVELLO 5.3: card Natura -->
+        <button class="poi-card poi-card--natura" type="button" aria-label="Natura">
+          <span class="poi-card__image" aria-hidden="true"></span>
+          <span class="poi-card__shade" aria-hidden="true"></span>
+
+          <span class="poi-card__content">
+            <span class="poi-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.5 4.5c-5.5 1-9.4 4.4-11.5 10.4-1.1 3.1-2.7 4.9-4 4.6 2.5 1.4 5.6.5 7.5-2.1 1.6-2.1 2.3-4.4 2.5-6.3 1.7.1 3.5-.2 5.4-1 2.7-1.2 4.2-3.4 4.6-6.1-1.2.5-2.8.7-4.5.5Z" />
+                <path d="M7.5 18.5c2.8-3.6 5.8-6.2 9.8-8.5" />
+              </svg>
+            </span>
+            <span class="poi-card__title">Natura</span>
+          </span>
+        </button>
+
+        <!-- LIVELLO 5.4: card Cibo -->
+        <button class="poi-card poi-card--cibo" type="button" aria-label="Cibo">
+          <span class="poi-card__image" aria-hidden="true"></span>
+          <span class="poi-card__shade" aria-hidden="true"></span>
+
+          <span class="poi-card__content">
+            <span class="poi-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 19.5h11a2 2 0 0 0 2-2v-4.2c0-2.6-2.1-4.8-4.8-4.8h-5.4c-2.6 0-4.8 2.1-4.8 4.8v4.2a2 2 0 0 0 2 2Z" />
+                <path d="M8 8.5h8" />
+                <path d="M12 8V5.5a1.5 1.5 0 1 0-3 0" />
+              </svg>
+            </span>
+            <span class="poi-card__title">Cibo</span>
+          </span>
+        </button>
+
+      </section>
+
+      <!-- LIVELLO 6: accessibilità -->
+      <section class="poi-section poi-section--accessibility" aria-label="Accessibilità">
+        <div class="poi-divider">
+          <span></span>
+          <p>Accessibilità</p>
+          <span></span>
+        </div>
+
+        <div class="accessibility-options">
+          <button class="access-option access-option--active" type="button">
+            <span class="access-option__circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="5" r="2" />
+                <path d="M9 8.5v5.5h5" />
+                <path d="M9 11.5c-2.7 0-5 2.2-5 5a5 5 0 0 0 5 5c2.4 0 4.5-1.7 4.9-4" />
+                <path d="M9 14h5.5c2.2 0 4-1.8 4-4V8.5" />
+              </svg>
+            </span>
+            <span class="access-option__label">Accesso<br>disabili</span>
+          </button>
+
+          <button class="access-option" type="button">
+            <span class="access-option__circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="8" cy="7.5" r="2.2" />
+                <circle cx="16" cy="7.5" r="2.2" />
+                <path d="M4.5 18.5v-2.2c0-2.2 1.8-4 4-4H9c2.2 0 4 1.8 4 4v2.2" />
+                <path d="M11 18.5v-1.8c0-2.1 1.7-3.8 3.8-3.8h.7c2.2 0 4 1.8 4 4v1.6" />
+              </svg>
+            </span>
+            <span class="access-option__label">Adatto alle<br>famiglie</span>
+          </button>
+
+          <button class="access-option access-option--active" type="button">
+            <span class="access-option__circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.5 4.5c-5.5 1-9.4 4.4-11.5 10.4-1.1 3.1-2.7 4.9-4 4.6 2.5 1.4 5.6.5 7.5-2.1 1.6-2.1 2.3-4.4 2.5-6.3 1.7.1 3.5-.2 5.4-1 2.7-1.2 4.2-3.4 4.6-6.1-1.2.5-2.8.7-4.5.5Z" />
+                <path d="M7.5 18.5c2.8-3.6 5.8-6.2 9.8-8.5" />
+              </svg>
+            </span>
+            <span class="access-option__label">Percorso<br>tranquillo</span>
+          </button>
+
+          <button class="access-option" type="button">
+            <span class="access-option__circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3.5 18.5 10.5 7l3 5 3.5-5 3.5 11.5H3.5Z" />
+              </svg>
+            </span>
+            <span class="access-option__label">Bassa<br>difficoltà</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- LIVELLO 7: tempo a disposizione -->
+      <section class="poi-section poi-section--time" aria-label="Tempo a disposizione">
+        <div class="poi-divider">
+          <span></span>
+          <p>Tempo a disposizione</p>
+          <span></span>
+        </div>
+
+        <div class="time-tabs" role="tablist" aria-label="Scegli il tempo">
+          <button type="button">1h</button>
+          <button type="button">3h</button>
+          <button class="time-tabs__active" type="button">Mezza giornata</button>
+          <button type="button">Giornata</button>
+        </div>
+      </section>
+
+      <!-- LIVELLO 8: CTA -->
+      <footer class="poi-cta">
+        <button class="cta" type="button">
+          <span>Crea itinerario</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 5l8 7-8 7" />
+          </svg>
+        </button>
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>

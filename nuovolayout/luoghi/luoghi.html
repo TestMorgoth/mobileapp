@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Nome del comune – Luoghi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/luoghi.css" />
+</head>
+
+<body>
+  <!-- LIVELLO 0: pagina browser responsive, senza shell telefono -->
+  <main class="places-page">
+
+    <!-- LIVELLO 1: fondali -->
+    <div class="places-page__base" aria-hidden="true"></div>
+    <div class="places-page__overlay places-page__overlay--top" aria-hidden="true"></div>
+    <div class="places-page__overlay places-page__overlay--center" aria-hidden="true"></div>
+    <div class="places-page__overlay places-page__overlay--vignette" aria-hidden="true"></div>
+
+    <!-- LIVELLO 2: layout principale -->
+    <div class="places-layout">
+
+      <!-- LIVELLO 3: top bar -->
+      <header class="places-topbar">
+
+        <div class="location">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" />
+            <circle cx="12" cy="10" r="2.6" />
+          </svg>
+          <span>Nome del Comune</span>
+        </div>
+
+        <button class="profile-button" type="button" aria-label="Profilo">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 20a7 7 0 0 0-14 0" />
+            <circle cx="12" cy="8" r="4" />
+          </svg>
+        </button>
+
+      </header>
+
+      <!-- LIVELLO 4: hero -->
+      <section class="hero">
+        <h1>Luoghi</h1>
+        <p>Scorci da scoprire</p>
+
+        <div class="hero-divider" aria-hidden="true">
+          <span></span>
+          <i></i>
+          <span></span>
+        </div>
+      </section>
+
+      <!-- LIVELLO 5: filtri rapidi -->
+      <section class="places-filters" aria-label="Filtri luoghi">
+        <button class="filter-chip filter-chip--active" type="button">Tutti</button>
+        <button class="filter-chip" type="button">Panorami</button>
+        <button class="filter-chip" type="button">Cultura</button>
+        <button class="filter-chip" type="button">Sapori</button>
+      </section>
+
+      <!-- LIVELLO 6: lista verticale luoghi -->
+      <section class="places-list" aria-label="Elenco luoghi in evidenza">
+
+        <!-- LUOGO 1 -->
+        <article class="place-row">
+          <div class="place-row__media" style="background-image:url('assets/place-belvedere.png');" aria-hidden="true"></div>
+
+          <div class="place-row__content">
+            <div class="place-row__topline">
+              <span class="place-row__tag">Panorama</span>
+              <button class="place-row__favorite" type="button" aria-label="Aggiungi ai preferiti">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+                </svg>
+              </button>
+            </div>
+
+            <h2>Belvedere del Lago</h2>
+            <p>Una terrazza naturale da cui osservare il profilo del territorio, ideale al tramonto.</p>
+
+            <div class="place-row__meta">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5.5l3.5 2.5" />
+                </svg>
+                30 min
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 18.5 10.5 7l3 5 3.5-5 3.5 11.5H3Z" />
+                </svg>
+                Facile
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- LUOGO 2 -->
+        <article class="place-row">
+          <div class="place-row__media" style="background-image:url('assets/place-borgo.png');" aria-hidden="true"></div>
+
+          <div class="place-row__content">
+            <div class="place-row__topline">
+              <span class="place-row__tag">Borgo</span>
+              <button class="place-row__favorite" type="button" aria-label="Aggiungi ai preferiti">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+                </svg>
+              </button>
+            </div>
+
+            <h2>Centro Storico</h2>
+            <p>Vie in pietra, piccole piazze e scorci antichi da attraversare con passo lento.</p>
+
+            <div class="place-row__meta">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5.5l3.5 2.5" />
+                </svg>
+                45 min
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" />
+                  <circle cx="12" cy="10" r="2.6" />
+                </svg>
+                Centro
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- LUOGO 3 -->
+        <article class="place-row">
+          <div class="place-row__media" style="background-image:url('assets/place-castello.png');" aria-hidden="true"></div>
+
+          <div class="place-row__content">
+            <div class="place-row__topline">
+              <span class="place-row__tag">Cultura</span>
+              <button class="place-row__favorite" type="button" aria-label="Aggiungi ai preferiti">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+                </svg>
+              </button>
+            </div>
+
+            <h2>Rocca Medievale</h2>
+            <p>Un punto monumentale che racconta la storia difensiva e simbolica del territorio.</p>
+
+            <div class="place-row__meta">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5.5l3.5 2.5" />
+                </svg>
+                60 min
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20h16" />
+                  <path d="M6 20V10h12v10" />
+                  <path d="M9 20v-4h6v4" />
+                  <path d="M8 10V6l4-2 4 2v4" />
+                </svg>
+                Monumento
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- LUOGO 4 -->
+        <article class="place-row">
+          <div class="place-row__media" style="background-image:url('assets/place-sapori.png');" aria-hidden="true"></div>
+
+          <div class="place-row__content">
+            <div class="place-row__topline">
+              <span class="place-row__tag">Sapori</span>
+              <button class="place-row__favorite" type="button" aria-label="Aggiungi ai preferiti">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+                </svg>
+              </button>
+            </div>
+
+            <h2>Bottega dei Sapori</h2>
+            <p>Una sosta dedicata ai prodotti locali, tra degustazioni, tradizioni e racconti.</p>
+
+            <div class="place-row__meta">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5.5l3.5 2.5" />
+                </svg>
+                40 min
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.5 19.5h11a2 2 0 0 0 2-2v-4.2c0-2.6-2.1-4.8-4.8-4.8h-5.4c-2.6 0-4.8 2.1-4.8 4.8v4.2a2 2 0 0 0 2 2Z" />
+                  <path d="M8 8.5h8" />
+                </svg>
+                Gusto
+              </span>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- LIVELLO 7: assistente contestuale -->
+      <section class="assistant-suggestion" aria-label="Suggerimento assistente AI">
+        <div class="assistant-suggestion__orb">AI</div>
+        <div>
+          <h3>Vuoi creare un percorso con questi luoghi?</h3>
+          <p>L'assistente può combinarli in un itinerario coerente con tempo, interessi e livello di difficoltà.</p>
+        </div>
+        <button class="assistant-suggestion__button" type="button">Crea itinerario</button>
+      </section>
+
+      <!-- LIVELLO 8: decorazione finale -->
+      <div class="bottom-decoration" aria-hidden="true">
+        <span></span>
+        <i></i>
+        <span></span>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

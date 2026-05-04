@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Assistente AI – Composer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/assistant.css" />
+</head>
+
+<body>
+  <!-- LIVELLO 0: pagina assistant responsive -->
+  <main class="assistant-page">
+
+    <!-- LIVELLO 1: fondali globali -->
+    <div class="assistant-page__base" aria-hidden="true"></div>
+    <div class="assistant-page__hero-bg" aria-hidden="true"></div>
+    <div class="assistant-page__overlay assistant-page__overlay--top" aria-hidden="true"></div>
+    <div class="assistant-page__overlay assistant-page__overlay--fade" aria-hidden="true"></div>
+    <div class="assistant-page__overlay assistant-page__overlay--vignette" aria-hidden="true"></div>
+
+    <!-- LIVELLO 2: layout principale -->
+    <div class="assistant-layout">
+
+      <!-- LIVELLO 3: topbar -->
+      <header class="assistant-topbar">
+        <button class="circle-button" type="button" aria-label="Torna indietro">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 12H5" />
+            <path d="M12 5l-7 7 7 7" />
+          </svg>
+        </button>
+
+        <div class="assistant-title">
+          <h1>Assistente AI</h1>
+          <div class="decor-line" aria-hidden="true">
+            <span></span>
+            <i></i>
+            <span></span>
+          </div>
+        </div>
+
+        <button class="circle-button" type="button" aria-label="Azioni AI">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11.5 4.5c.5 2 1.8 3.4 3.9 3.9-2 .5-3.4 1.8-3.9 3.9-.5-2-1.8-3.4-3.9-3.9 2-.5 3.4-1.8 3.9-3.9Z" />
+            <path d="M18 8.5c.25 1 .95 1.7 2 2-.95.25-1.7.95-2 2-.25-.95-.95-1.7-2-2 1.05-.3 1.75-1 2-2Z" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- LIVELLO 4: componente iniziale / composer -->
+      <section class="composer-panel" aria-labelledby="composer-title">
+
+        <div class="composer-panel__header">
+          <div>
+            <p class="composer-panel__eyebrow">Composer</p>
+            <h2 id="composer-title">Avvia una richiesta</h2>
+          </div>
+
+          <a class="composer-panel__link" href="#">Apri esplora</a>
+        </div>
+
+        <!-- LIVELLO 4.1: domande suggerite già pronte -->
+        <div class="suggested-questions" aria-label="Domande suggerite">
+          <button class="suggested-chip" type="button">Qual è la storia di Subiaco?</button>
+          <button class="suggested-chip" type="button">Cosa posso visitare in due ore?</button>
+          <button class="suggested-chip" type="button">Ci sono eventi nel territorio?</button>
+          <button class="suggested-chip" type="button">Come arrivo al punto di interesse più vicino?</button>
+        </div>
+
+        <!-- LIVELLO 4.2: azione posizione -->
+        <div class="composer-actions">
+          <button class="location-chip" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" />
+              <circle cx="12" cy="10" r="2.6" />
+            </svg>
+            Usa la mia posizione
+          </button>
+        </div>
+
+        <!-- LIVELLO 4.3: input libero -->
+        <form class="composer-form" action="#" method="get">
+          <label class="sr-only" for="assistant-question">Scrivi una domanda sul territorio</label>
+          <textarea id="assistant-question" name="question" rows="5" placeholder="Scrivi una domanda sul territorio..."></textarea>
+
+          <button class="send-request" type="submit">
+            <span>Invia richiesta</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 3 10 14" />
+              <path d="M21 3 14 21l-4-7-7-4 18-7Z" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- LIVELLO 5: esempio di output statico dell'assistente -->
+      <section class="assistant-response" aria-label="Esempio di risposta dell'assistente">
+
+        <div class="response-line" aria-hidden="true"></div>
+
+        <!-- RISPOSTA 1 -->
+        <article class="assistant-card assistant-card--intro">
+          <div class="assistant-card__number">1</div>
+
+          <div class="assistant-card__intro-grid">
+            <div class="ai-orb-small" aria-hidden="true">
+              <span>✦</span>
+            </div>
+
+            <div class="assistant-card__intro-copy">
+              <p class="assistant-card__eyebrow">Risposta dell'assistente</p>
+              <h2>Ecco un esempio di risposta</h2>
+
+              <ul class="assistant-meta">
+                <li>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5.5l3.5 2.5" />
+                  </svg>
+                  <span>Tempo stimato: 2 ore</span>
+                </li>
+
+                <li>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+                  </svg>
+                  <span>Mood: culturale e panoramico</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- RISPOSTA 2 -->
+        <article class="assistant-card assistant-card--place">
+          <div class="assistant-card__number">2</div>
+
+          <div class="place-card">
+            <div class="place-card__left">
+              <div class="place-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20h16" />
+                  <path d="M6 20V10h12v10" />
+                  <path d="M9 20v-4h6v4" />
+                  <path d="M8 10V6l4-2 4 2v4" />
+                </svg>
+              </div>
+
+              <div class="place-card__copy">
+                <h3>Centro Storico</h3>
+                <p>Una prima risposta potrebbe suggerire il centro storico come punto di partenza, con una breve spiegazione del luogo e del percorso.</p>
+
+                <div class="place-card__time">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5.5l3.5 2.5" />
+                  </svg>
+                  <span>Visita consigliata: 45 min</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="place-card__media" style="background-image:url('assets/assistant-castello.png');" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <!-- RISPOSTA 3 -->
+        <article class="assistant-card assistant-card--place">
+          <div class="assistant-card__number">3</div>
+
+          <div class="place-card">
+            <div class="place-card__left">
+              <div class="place-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4.5 15.5c1.3-5.8 3.8-9.7 7.5-11.7" />
+                  <path d="M19.5 15.5c-1.3-5.8-3.8-9.7-7.5-11.7" />
+                  <path d="M8 12.5c.8-1.8 2.1-2.8 4-2.8s3.2.9 4 2.8" />
+                </svg>
+              </div>
+
+              <div class="place-card__copy">
+                <h3>Punto panoramico</h3>
+                <p>Il secondo suggerimento può portare l'utente verso un luogo aperto, facile da raggiungere e coerente con la richiesta iniziale.</p>
+
+                <div class="place-card__time">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5.5l3.5 2.5" />
+                  </svg>
+                  <span>Visita consigliata: 30 min</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="place-card__media" style="background-image:url('assets/assistant-belvedere.png');" aria-hidden="true"></div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- LIVELLO 6: footer assistant -->
+      <section class="assistant-footer">
+        <div class="assistant-footer__orb" aria-hidden="true">
+          <span>AI</span>
+        </div>
+
+        <button class="assistant-cta" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 3 10 14" />
+            <path d="M21 3 14 21l-4-7-7-4 18-7Z" />
+          </svg>
+          <span>Avvia percorso</span>
+        </button>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
