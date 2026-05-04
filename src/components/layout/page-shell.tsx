@@ -9,8 +9,8 @@ export function PageShell({
   shellVariant: string;
 }>): JSX.Element {
   return (
-    <main className="content">
-      <div className={`page-shell page-shell-${pageKey} page-shell-variant-${shellVariant}`}>
+    <main className="nl-content">
+      <div className={`nl-page-shell nl-page-shell--${pageKey} nl-page-shell--${shellVariant}`}>
         {children}
       </div>
     </main>
