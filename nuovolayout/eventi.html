@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/layout.css" /><title>Nome del Comune – Eventi</title>
+  <style>
+    /* Fix locale: carosello eventi orizzontale */
+    .nl-events__carousel {
+      cursor: grab;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      scroll-behavior: smooth;
+    }
+
+    .nl-events__carousel:active {
+      cursor: grabbing;
+    }
+
+    .nl-events__carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nl-carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0 22px;
+    }
+
+    .nl-carousel-dot {
+      appearance: none;
+      width: 26px;
+      height: 6px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(216, 176, 117, 0.36);
+      cursor: pointer;
+    }
+
+    .nl-carousel-dot--active {
+      width: 34px;
+      background: linear-gradient(180deg, rgba(255,233,182,0.95) 0%, rgba(216,176,117,0.95) 100%);
+      box-shadow: 0 0 12px rgba(255, 207, 130, 0.28);
+    }
+  </style>
+</head><body class="nl-page nl-events"><div class="nl-bg nl-bg--dark"></div><main class="nl-events__layout"><header class="nl-events-topbar nl-topbar"><a class="nl-circle-btn" href="index.html" aria-label="Indietro"><svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg></a><a class="nl-circle-btn" href="assistente.html" aria-label="Profilo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg></a></header><section class="nl-page-title"><h1>Eventi</h1><p>Storie da vivere</p><div class="nl-decor"><span></span><i></i><span></span></div></section><section class="nl-events__carousel" id="eventsCarousel" aria-label="Carosello eventi in evidenza"><article class="nl-event-card" data-index="0"><img src="assets/event-luci-lago.png" alt=""><div><h2>Luci sul Lago</h2><p class="nl-date">15 LUGLIO 2025</p><p>Una serata tra riflessi, musica e scorci sul lago.</p><div class="nl-event-actions"><button><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2.5"/></svg></button><button><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"/></svg></button></div></div></article><article class="nl-event-card" data-index="1"><img src="assets/event-festival-borgo.png" alt=""><div><h2>Festival del Borgo</h2><p class="nl-date">21–23 GIUGNO 2025</p><p>Tre giorni di musica, sapori e tradizioni nel cuore del borgo antico.</p><div class="nl-event-actions"><button><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2.5"/></svg></button><button><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"/></svg></button></div></div></article><article class="nl-event-card" data-index="2"><img src="assets/event-cammini-sapori.png" alt=""><div><h2>Cammini di Sapori</h2><p class="nl-date">12 LUGLIO 2025</p><p>Percorsi panoramici e degustazioni tra i borghi del territorio.</p><div class="nl-event-actions"><button><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2.5"/></svg></button><button><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"/></svg></button></div></div></article></section>
+<div class="nl-carousel-dots" aria-label="Indicatori carosello eventi">
+  <button class="nl-carousel-dot" type="button" aria-label="Vai al primo evento" data-carousel-target="0"></button>
+  <button class="nl-carousel-dot nl-carousel-dot--active" type="button" aria-label="Vai al secondo evento" data-carousel-target="1"></button>
+  <button class="nl-carousel-dot" type="button" aria-label="Vai al terzo evento" data-carousel-target="2"></button>
+</div>
+<section class="nl-details"><div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2.5"/></svg><div><h3>Dalle 18:00 alle 24:00</h3><p>Orari degli eventi principali</p></div></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><div><h3>Centro Storico di Subiaco</h3><p>Subiaco</p></div></div></section><nav class="nl-nav" aria-label="Navigazione principale"><a class="nl-nav__item" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a><a class="nl-nav__item" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a><a class="nl-nav__item nl-nav__item--active" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a><a class="nl-nav__item" href="planner.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/><path d="M7 5l-3 3 3 3M17 11l3 3-3 3"/></svg></span><span>Planner</span></a></nav></main>
+<script>
+  (function () {
+    const carousel = document.getElementById('eventsCarousel');
+    if (!carousel) return;
+
+    const cards = Array.from(carousel.querySelectorAll('.nl-event-card'));
+    const dots = Array.from(document.querySelectorAll('.nl-carousel-dot'));
+
+    function updateDots(activeIndex) {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('nl-carousel-dot--active', index === activeIndex);
+      });
+    }
+
+    function centerCard(index, smooth = true) {
+      const card = cards[index];
+      if (!card) return;
+
+      const targetLeft = card.offsetLeft - (carousel.clientWidth - card.clientWidth) / 2;
+      carousel.scrollTo({ left: targetLeft, behavior: smooth ? 'smooth' : 'auto' });
+      updateDots(index);
+    }
+
+    function detectActiveCard() {
+      const center = carousel.scrollLeft + carousel.clientWidth / 2;
+      let activeIndex = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + card.clientWidth / 2;
+        const distance = Math.abs(center - cardCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      updateDots(activeIndex);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        centerCard(Number(dot.dataset.carouselTarget || 0));
+      });
+    });
+
+    let scrollTimer;
+    carousel.addEventListener('scroll', () => {
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(detectActiveCard, 60);
+    }, { passive: true });
+
+    window.addEventListener('load', () => centerCard(1, false));
+    window.addEventListener('resize', () => centerCard(1, false));
+  })();
+</script>
+</body></html>
