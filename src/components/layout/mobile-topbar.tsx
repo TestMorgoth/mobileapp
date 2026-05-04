@@ -1,4 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+function BackIcon(): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19 12H5" />
+      <path d="M12 5l-7 7 7 7" />
+    </svg>
+  );
+}
+
+function ProfileIcon(): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19 20a7 7 0 0 0-14 0" />
+      <circle cx="12" cy="8" r="4" />
+    </svg>
+  );
+}
 
 export function MobileTopbar({
   eyebrow,
@@ -13,38 +31,29 @@ export function MobileTopbar({
   shellVariant: string;
   navKey: string;
 }): JSX.Element {
-  const showUtilityActions = navKey !== 'assistant';
-  const isImmersive = shellVariant === 'immersive';
-  const isDetail = shellVariant === 'detail';
+  const navigate = useNavigate();
+  const isHome = navKey === 'home' && shellVariant === 'immersive';
 
   return (
-    <header className={`topbar topbar-${shellVariant}`}>
-      <div className="topbar-copy">
-        <p className="eyebrow">{eyebrow}</p>
+    <header className={`nl-mobile-topbar nl-mobile-topbar--${shellVariant}`}>
+      <button className="nl-circle-button" type="button" aria-label="Torna indietro" onClick={() => navigate(-1)}>
+        <BackIcon />
+      </button>
+
+      <div className="nl-mobile-title">
+        <p className="nl-eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
-        <p className="topbar-subtitle">{subtitle}</p>
+        <div className="nl-ornament" aria-hidden="true">
+          <span />
+          <i />
+          <span />
+        </div>
+        {isHome ? <p className="nl-mobile-subtitle">{subtitle}</p> : null}
       </div>
 
-      <div className="topbar-actions">
-        {showUtilityActions ? (
-          <Link className="topbar-action" to="/search">
-            Cerca
-          </Link>
-        ) : null}
-        {showUtilityActions ? (
-          <Link className="topbar-action" to="/planner">
-            Planner
-          </Link>
-        ) : null}
-        {isDetail ? (
-          <Link className="topbar-action" to="/favorites">
-            Salva
-          </Link>
-        ) : null}
-        <Link className={isImmersive ? 'topbar-action topbar-action-primary' : 'topbar-action'} to="/profile">
-          Profilo
-        </Link>
-      </div>
+      <Link className="nl-circle-button" to="/profile" aria-label="Profilo">
+        <ProfileIcon />
+      </Link>
     </header>
   );
 }
