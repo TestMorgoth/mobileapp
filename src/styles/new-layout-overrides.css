@@ -1,0 +1,188 @@
+/* Compatibility layer for existing TSX class names.
+   Loaded after new-layout.css so it can safely adapt the current component tree. */
+
+.unstyled-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.visual-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  border-radius: var(--nl-radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.visual-card-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 214, 145, 0.12), transparent 38%),
+    linear-gradient(135deg, rgba(76, 49, 23, 0.7), rgba(9, 7, 6, 0.95));
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.02);
+}
+
+.visual-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.14) 36%, rgba(8, 6, 5, 0.88) 100%),
+    radial-gradient(circle at 50% 20%, rgba(255, 213, 147, 0.08), transparent 35%);
+}
+
+.visual-card-body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.visual-card-head,
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.visual-card-copy,
+.card-head > div {
+  min-width: 0;
+}
+
+.visual-card h3,
+.card-content h3 {
+  margin: 0 0 8px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(28px, 4.8vw, 42px);
+  line-height: 0.96;
+  font-weight: 500;
+  color: var(--nl-gold-light);
+}
+
+.visual-card-subtitle,
+.visual-card-body-text,
+.card-content p,
+.card-content .muted {
+  margin: 0;
+  color: rgba(239, 205, 150, 0.9);
+  line-height: 1.48;
+}
+
+.card-content:not(.visual-card) {
+  display: grid;
+  gap: 12px;
+}
+
+.card-meta {
+  color: rgba(239, 205, 150, 0.75);
+  font-size: 13px;
+}
+
+.home-stack .hero-media,
+.explore-stack .hero-media,
+.poi-stack .hero-media,
+.events-stack .hero-media,
+.assistant-stack .hero-media {
+  margin-top: 4px;
+}
+
+.page-shell-home .home-stack > .hero-media {
+  min-height: clamp(560px, 74vh, 760px);
+}
+
+.page-shell-home .home-overview,
+.nl-page-shell--home .home-overview {
+  margin-top: -4px;
+}
+
+.events-grid .visual-card {
+  min-height: 620px;
+}
+
+.events-card-stack .visual-card-body {
+  text-align: center;
+  padding: 28px;
+}
+
+.events-card-stack .visual-card h3 {
+  font-size: clamp(42px, 10vw, 62px);
+  line-height: 0.9;
+}
+
+.poi-grid .visual-card,
+.explore-feature-grid .visual-card {
+  min-height: 280px;
+}
+
+.assistant-overview,
+.assistant-stack .section:has(.assistant-starter-grid) {
+  border-radius: 32px;
+}
+
+.assistant-stack .section:has(.assistant-starter-grid) {
+  border-color: rgba(244, 239, 230, 0.72);
+  background:
+    radial-gradient(circle at 22% 10%, rgba(216, 176, 117, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(31, 25, 18, 0.88) 0%, rgba(17, 13, 9, 0.96) 100%);
+}
+
+.assistant-stack .assistant-composer .button {
+  justify-self: flex-start;
+  background: rgba(0, 112, 116, 0.52);
+  border: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.assistant-message,
+.assistant-response-card,
+.recommendation-card {
+  border-radius: 24px;
+  border: 1.6px solid rgba(228, 191, 126, 0.72);
+  background: linear-gradient(180deg, rgba(14, 10, 8, 0.84) 0%, rgba(9, 7, 6, 0.92) 100%);
+  box-shadow: 0 0 20px rgba(244, 201, 123, 0.12), inset 0 0 18px rgba(255, 234, 191, 0.05);
+}
+
+.map-shell .section,
+.map-stack .section {
+  background: linear-gradient(180deg, rgba(14, 10, 8, 0.82), rgba(9, 7, 6, 0.96));
+}
+
+.search-stack .section:first-of-type input,
+.search-stack input[type='search'] {
+  width: 100%;
+  min-height: 58px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 212, 152, 0.35);
+  background: #fff;
+  color: #181818;
+}
+
+@media (max-width: 620px) {
+  .visual-card {
+    min-height: 260px;
+  }
+
+  .events-grid .visual-card {
+    min-height: 560px;
+  }
+
+  .visual-card-head,
+  .card-head {
+    flex-direction: column;
+  }
+
+  .assistant-stack .assistant-composer .button {
+    width: 100%;
+  }
+}
