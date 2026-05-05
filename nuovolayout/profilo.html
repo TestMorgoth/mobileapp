@@ -1,54 +1,19 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/layout.css" />
-  <title>Nome del Comune – Profilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/layout.css" /><link rel="stylesheet" href="assets/chicago.css" />
+  <title>Chicago AI – Profile</title>
 </head>
-<body class="nl-page nl-profile">
-<div class="nl-bg nl-bg--dark"></div>
-<main class="nl-shell">
-<header class="nl-topbar">
-  <a class="nl-circle-btn" href="index.html" aria-label="Indietro">
-    <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
-  </a>
-  <a class="nl-circle-btn" href="profilo.html" aria-label="Profilo">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg>
-  </a>
-</header>
-<section class="nl-page-title">
-  <h1>Profilo</h1>
-  <p>Stato dell’esperienza personale</p>
-  <div class="nl-decor"><span></span><i></i><span></span></div>
-</section>
-<section class="nl-profile-card">
-  <div class="nl-mini-orb">U</div>
-  <div><p>Profilo locale</p><h3>Visitatore</h3><p>Sessione locale e preferenze personali del dispositivo.</p></div>
-</section>
-<section class="nl-block-card">
-  <p>Sessione</p><h3>Stato locale</h3>
-  <div class="nl-info-grid">
-    <article><span>Autenticazione</span><strong>Nessun token</strong></article>
-    <article><span>Luoghi</span><strong>2</strong></article>
-    <article><span>Eventi</span><strong>1</strong></article>
-    <article><span>Itinerari</span><strong>1</strong></article>
-  </div>
-</section>
-<section class="nl-content-block">
-  <h3>Strumenti</h3>
-  <div class="nl-card-grid">
-    <a href="mappa.html"><h4>Apri mappa</h4><p>Geolocalizzazione e orientamento.</p></a>
-    <a href="impostazioni.html"><h4>Impostazioni</h4><p>Lingua, permessi e configurazioni.</p></a>
-    <a href="preferiti.html"><h4>Preferiti</h4><p>Contenuti salvati.</p></a>
-  </div>
-</section><nav class="nl-nav" aria-label="Navigazione principale">
-<a class="nl-nav__item" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a>
-<a class="nl-nav__item nl-nav__item--active" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a>
-<a class="nl-nav__item" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a>
-<a class="nl-nav__item" href="planner.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/><path d="M7 5l-3 3 3 3M17 11l3 3-3 3"/></svg></span><span>Planner</span></a>
-</nav>
+<body class="chi-page"><div class="chi-bg" aria-hidden="true"><span class="chi-grid"></span><span class="chi-beam chi-beam--one"></span><span class="chi-beam chi-beam--two"></span></div>
+<main class="chi-app-shell">
+<header class="chi-topbar"><a class="chi-icon-btn" href="index.html" aria-label="Back home"><svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg></a><a class="chi-brand" href="index.html"><span class="chi-brand__mark">CHI</span><span><strong>Profile</strong><em>Your city settings</em></span></a><a class="chi-icon-btn" href="assistente.html" aria-label="Open assistant"><svg viewBox="0 0 24 24"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></a></header>
+<section class="chi-page-hero"><p class="chi-eyebrow">Personal layer</p><h1>Your Chicago, tuned to you.</h1><p>Manage preferences, saved places, favorite moods, location settings, and the way Chicago AI builds recommendations.</p></section>
+<section class="chi-profile-card"><div class="chi-ai-card__orb">U</div><div><p>Local profile</p><h2>Chicago visitor</h2><span>Personal preferences are stored locally in this prototype.</span></div></section>
+<section class="chi-card-grid"><article class="chi-feature-card chi-feature-card--blue"><span>Saved</span><h2>12 places</h2><p>Restaurants, landmarks, and neighborhood ideas saved for later.</p></article><article class="chi-feature-card chi-feature-card--orange"><span>Mood</span><h2>Urban explorer</h2><p>Recommendations lean toward architecture, food, transit, and skyline views.</p></article><article class="chi-feature-card chi-feature-card--green"><span>Privacy</span><h2>Local first</h2><p>Location access is requested only when a nearby result or route is needed.</p></article></section>
+<section class="chi-settings-list"><a href="preferiti.html"><strong>Saved places</strong><span>Open favorites</span></a><a href="impostazioni.html"><strong>App settings</strong><span>Language, permissions, notifications</span></a><a href="accessibilita.html"><strong>Accessibility</strong><span>Readable, practical city guidance</span></a><a href="assistente.html"><strong>AI preferences</strong><span>Adjust interests and planning style</span></a></section>
+<nav class="chi-bottom-nav" aria-label="Main navigation"><a class="chi-bottom-nav__item" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg><span>Home</span></a><a class="chi-bottom-nav__item" href="esplora.html"><svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg><span>Explore</span></a><a class="chi-bottom-nav__item chi-bottom-nav__item--main" href="assistente.html"><span>AI</span></a><a class="chi-bottom-nav__item" href="eventi.html"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg><span>Events</span></a><a class="chi-bottom-nav__item" href="planner.html"><svg viewBox="0 0 24 24"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/></svg><span>Plan</span></a></nav>
 </main></body></html>
