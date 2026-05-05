@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/layout.css" />
-  <title>Nome del Comune – Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/layout.css" /><link rel="stylesheet" href="assets/chicago.css" />
+  <title>Chicago AI – Planner</title>
 </head>
-<body class="nl-page nl-planner">
-<div class="nl-bg nl-bg--dark"></div>
-<main class="nl-shell">
-<header class="nl-topbar">
-  <a class="nl-circle-btn" href="esplora.html" aria-label="Indietro">
-    <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
-  </a>
-  <a class="nl-circle-btn" href="assistente.html" aria-label="Profilo">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg>
-  </a>
-</header>
-<section class="nl-page-title">
-  <h1>Planner</h1>
-  <p>Costruisci un percorso su misura</p>
-  <div class="nl-decor"><span></span><i></i><span></span></div>
-</section>
-<section class="nl-planner-grid">
-<button class="nl-planner-card"><img src="assets/planner-monumenti.png" alt=""><span>Monumenti</span></button>
-<button class="nl-planner-card"><img src="assets/planner-musei.png" alt=""><span>Musei</span></button>
-<button class="nl-planner-card"><img src="assets/planner-natura.png" alt=""><span>Natura</span></button>
-<button class="nl-planner-card"><img src="assets/planner-cibo.png" alt=""><span>Cibo</span></button>
-</section><section class="nl-planner-options"><h3>Genera un percorso</h3><div><button>1 ora</button><button>2 ore</button><button>3 ore</button><button>Mezza giornata</button></div><a class="nl-primary" href="itinerario-dettaglio.html">Genera percorso demo</a></section><section class="nl-home-links"><a href="itinerari.html">Itinerari pubblicati</a><a href="assistente.html">Chiedi all’AI</a><a href="mappa.html">Apri mappa</a></section><nav class="nl-nav" aria-label="Navigazione principale">
-<a class="nl-nav__item" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a>
-<a class="nl-nav__item" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a>
-<a class="nl-nav__item" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a>
-<a class="nl-nav__item nl-nav__item--active" href="planner.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/><path d="M7 5l-3 3 3 3M17 11l3 3-3 3"/></svg></span><span>Planner</span></a>
-</nav>
+<body class="chi-page"><div class="chi-bg" aria-hidden="true"><span class="chi-grid"></span><span class="chi-beam chi-beam--one"></span><span class="chi-beam chi-beam--two"></span></div>
+<main class="chi-app-shell">
+<header class="chi-topbar"><a class="chi-icon-btn" href="index.html" aria-label="Back home"><svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg></a><a class="chi-brand" href="index.html"><span class="chi-brand__mark">CHI</span><span><strong>Chicago Planner</strong><em>Smart routes</em></span></a><a class="chi-icon-btn" href="profilo.html" aria-label="Open profile"><svg viewBox="0 0 24 24"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg></a></header>
+<section class="chi-page-hero"><p class="chi-eyebrow">Plan smarter</p><h1>Build a day that fits your city mood.</h1><p>Choose time, vibe, transit style, and neighborhood. Chicago AI turns it into a practical route with stops, timing, and local tips.</p></section>
+<section class="chi-search-panel"><form class="chi-prompt" action="assistente.html"><label for="planner-prompt">Create a plan</label><div><input id="planner-prompt" type="text" placeholder="Try: 4 hours, architecture, coffee, no car..." /><button>Build</button></div></form><div class="chi-suggestions"><a href="assistente.html">1 hour</a><a href="assistente.html">3 hours</a><a href="assistente.html">Half day</a><a href="assistente.html">Rainy day</a><a href="assistente.html">Date night</a></div></section>
+<section class="chi-card-grid"><button class="chi-feature-card chi-feature-card--blue"><span>Vibe</span><h2>Architecture</h2><p>Riverwalk, historic towers, skyline viewpoints, and photo stops.</p></button><button class="chi-feature-card chi-feature-card--orange"><span>Vibe</span><h2>Food crawl</h2><p>Deep-dish, hot dogs, coffee, rooftops, and neighborhood favorites.</p></button><button class="chi-feature-card chi-feature-card--green"><span>Vibe</span><h2>Lakefront</h2><p>Fresh air, walking paths, beaches, parks, and skyline views.</p></button></section>
+<section class="chi-response-card"><p>Demo route</p><h2>Loop → Riverwalk → West Loop dinner → Green Line return.</h2><ul><li>Estimated time: 4 hours</li><li>Transit: CTA-friendly</li><li>Best for: first-time visitors, skyline lovers, food plans</li></ul><a class="chi-primary-link" href="itinerario-dettaglio.html">Open demo itinerary</a></section>
+<nav class="chi-bottom-nav" aria-label="Main navigation"><a class="chi-bottom-nav__item" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg><span>Home</span></a><a class="chi-bottom-nav__item" href="esplora.html"><svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg><span>Explore</span></a><a class="chi-bottom-nav__item chi-bottom-nav__item--main" href="assistente.html"><span>AI</span></a><a class="chi-bottom-nav__item" href="eventi.html"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg><span>Events</span></a><a class="chi-bottom-nav__item chi-bottom-nav__item--active" href="planner.html"><svg viewBox="0 0 24 24"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/></svg><span>Plan</span></a></nav>
 </main></body></html>
