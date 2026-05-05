@@ -1,16 +1,122 @@
-<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/layout.css" /><title>Nome del Comune – Home</title></head><body class="nl-page nl-home">
-<div class="nl-bg nl-bg--home"></div><div class="nl-overlay nl-overlay--home"></div>
-<main class="nl-home__layout"><header class="nl-home-topbar nl-topbar"><div class="nl-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Nome del Comune</span></div><a class="nl-circle-btn" href="profilo.html" aria-label="Profilo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg></a></header>
-<section class="nl-home__hero"><h1>Benvenuto<br>nel Territorio</h1><div class="nl-decor"><span></span><i></i><span></span></div><p>Come vuoi vivere oggi?</p></section>
-<section class="nl-home__ai"><a class="nl-ai-orb" href="assistente.html"><span>AI</span></a></section>
-<section class="nl-home-links"><a href="ricerca.html">Ricerca</a><a href="mappa.html">Mappa</a><a href="preferiti.html">Preferiti</a><a href="profilo.html">Profilo</a></section><nav class="nl-nav" aria-label="Navigazione principale">
-<a class="nl-nav__item nl-nav__item--active" href="index.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.7 8.3l-4.5 7.5-2.9-2"/></svg></span><span>Home</span></a>
-<a class="nl-nav__item" href="esplora.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Esplora</span></a>
-<a class="nl-nav__item" href="eventi.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg></span><span>Eventi</span></a>
-<a class="nl-nav__item" href="planner.html"><span class="nl-nav__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/><path d="M7 5l-3 3 3 3M17 11l3 3-3 3"/></svg></span><span>Planner</span></a>
-</nav>
-<div class="nl-bottom-decor"><span></span><i></i><span></span></div></main></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/layout.css" />
+  <link rel="stylesheet" href="assets/chicago.css" />
+  <title>Chicago AI – City Assistant</title>
+</head>
+<body class="chi-page">
+  <div class="chi-bg" aria-hidden="true">
+    <span class="chi-grid"></span>
+    <span class="chi-beam chi-beam--one"></span>
+    <span class="chi-beam chi-beam--two"></span>
+  </div>
+
+  <main class="chi-app-shell">
+    <header class="chi-topbar">
+      <a class="chi-brand" href="index.html" aria-label="Chicago AI home">
+        <span class="chi-brand__mark">CHI</span>
+        <span>
+          <strong>Chicago AI</strong>
+          <em>City intelligence</em>
+        </span>
+      </a>
+      <a class="chi-icon-btn" href="profilo.html" aria-label="Apri profilo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20a7 7 0 0 0-14 0"/><circle cx="12" cy="8" r="4"/></svg>
+      </a>
+    </header>
+
+    <section class="chi-hero" aria-labelledby="chi-title">
+      <div class="chi-live-chip">
+        <span></span>
+        Live in Chicago
+      </div>
+
+      <div class="chi-skyline" aria-hidden="true">
+        <i class="chi-tower chi-tower--1"></i>
+        <i class="chi-tower chi-tower--2"></i>
+        <i class="chi-tower chi-tower--3"></i>
+        <i class="chi-tower chi-tower--4"></i>
+        <i class="chi-tower chi-tower--5"></i>
+        <i class="chi-lake"></i>
+      </div>
+
+      <div class="chi-hero__copy">
+        <p class="chi-eyebrow">Ask the city. Move smarter.</p>
+        <h1 id="chi-title">Your AI guide<br>to Chicago.</h1>
+        <p class="chi-subtitle">Scopri quartieri, eventi, trasporti, food spots e percorsi sul lakefront con un assistente pensato per vivere Chicago in modo più semplice e cool.</p>
+      </div>
+
+      <a class="chi-ai-card" href="assistente.html" aria-label="Apri l'assistente AI di Chicago">
+        <span class="chi-ai-card__orb">AI</span>
+        <span>
+          <strong>Start a city chat</strong>
+          <em>Dimmi cosa vuoi fare oggi</em>
+        </span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+
+    <section class="chi-search-panel" aria-label="Azioni rapide AI">
+      <form class="chi-prompt" action="assistente.html">
+        <label for="city-prompt">Cosa vuoi sapere su Chicago?</label>
+        <div>
+          <input id="city-prompt" type="text" placeholder="Es. rooftop vicino al Loop, museo per oggi, CTA più veloce..." />
+          <button type="submit">Ask</button>
+        </div>
+      </form>
+
+      <div class="chi-suggestions" aria-label="Domande suggerite">
+        <a href="assistente.html">Plan my lakefront day</a>
+        <a href="assistente.html">Best deep-dish nearby</a>
+        <a href="assistente.html">What’s happening tonight?</a>
+        <a href="assistente.html">Safe route to the L</a>
+      </div>
+    </section>
+
+    <section class="chi-card-grid" aria-label="Sezioni principali">
+      <a class="chi-feature-card chi-feature-card--blue" href="mappa.html">
+        <span>01</span>
+        <h2>Smart Map</h2>
+        <p>Quartieri, CTA, landmark e punti utili in una vista rapida.</p>
+      </a>
+      <a class="chi-feature-card chi-feature-card--orange" href="eventi.html">
+        <span>02</span>
+        <h2>Tonight</h2>
+        <p>Eventi, concerti, sport e cose da fare in base al tuo mood.</p>
+      </a>
+      <a class="chi-feature-card chi-feature-card--green" href="planner.html">
+        <span>03</span>
+        <h2>Planner</h2>
+        <p>Itinerari AI per Loop, Riverwalk, Wicker Park, Hyde Park e lakefront.</p>
+      </a>
+    </section>
+
+    <section class="chi-neighborhood-strip" aria-label="Quartieri suggeriti">
+      <div>
+        <p>Neighborhood radar</p>
+        <h2>Pick a vibe</h2>
+      </div>
+      <div class="chi-neighborhoods">
+        <a href="esplora.html">The Loop</a>
+        <a href="esplora.html">River North</a>
+        <a href="esplora.html">Wicker Park</a>
+        <a href="esplora.html">Hyde Park</a>
+      </div>
+    </section>
+
+    <nav class="chi-bottom-nav" aria-label="Navigazione principale">
+      <a class="chi-bottom-nav__item chi-bottom-nav__item--active" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg><span>Home</span></a>
+      <a class="chi-bottom-nav__item" href="esplora.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14M15 6v14"/></svg><span>Explore</span></a>
+      <a class="chi-bottom-nav__item chi-bottom-nav__item--main" href="assistente.html"><span>AI</span></a>
+      <a class="chi-bottom-nav__item" href="eventi.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 3v5M16 3v5M4 11h16"/></svg><span>Events</span></a>
+      <a class="chi-bottom-nav__item" href="planner.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H7"/><path d="M7 11h10c1.7 0 3 1.3 3 3s-1.3 3-3 3H5"/></svg><span>Plan</span></a>
+    </nav>
+  </main>
+</body>
+</html>
